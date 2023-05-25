@@ -1,0 +1,32 @@
+import java.util.*;
+public class selection
+{
+public static void main(String[]args)
+{
+    int[]nums=new int[nums.length];
+    Scanner scn=new Scanner(System.in);
+    for(int i=0;i<nums.length;i++)
+    {
+        nums[i]=scn.nextInt();
+    }
+    selectionsort(nums);
+    for(int vl:nums)
+    System.out.println(vl);
+
+}
+public void selectionsort(int[]nums)
+{
+    for(int i=0;i<nums.length-1;i++)
+    { int min=i;
+        for(int j=i;j<nums.length;j++)
+        {
+           if(nums[j]<nums[min])
+           min=j;
+
+        }
+        int temp=nums[i];
+        nums[i]=nums[j];
+        nums[j]=temp;
+    }
+}
+}
